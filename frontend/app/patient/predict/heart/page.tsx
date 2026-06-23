@@ -304,7 +304,7 @@ export default function HeartDiseasePrediction() {
 
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-1">
-                      Fasting Blood Sugar > 120 mg/dl <span className="text-red-500">*</span>
+                      Fasting Blood Sugar &gt; 120 mg/dl <span className="text-red-500">*</span>
                     </label>
                     <select
                       value={formData.fasting_blood_sugar}
