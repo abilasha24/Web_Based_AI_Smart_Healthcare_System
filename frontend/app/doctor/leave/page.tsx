@@ -49,7 +49,7 @@ export default function DoctorLeavePage() {
     const fromErr = validateRequired(form.from_date, 'From date');
     const toErr = validateRequired(form.to_date, 'To date');
     if (fromErr || toErr) {
-      const msg = fromErr || toErr;
+      const msg = (fromErr || toErr) as string;
       setMessage(msg);
       await showError('Please fill required fields', msg);
       return;
