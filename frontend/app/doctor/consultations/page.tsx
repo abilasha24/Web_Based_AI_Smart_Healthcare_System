@@ -55,9 +55,9 @@ export default function DoctorConsultationsPage() {
     const patientErr = validateRequired(form.patient_id, 'Patient');
     const dateErr = validateRequired(form.scheduled_at, 'Date & time');
     if (patientErr || dateErr) {
-      const text = patientErr || dateErr;
-      setMessage({ type: 'error', text });
-      await showError('Please fill required fields', text);
+      const text = (patientErr || dateErr) as string;
+setMessage({ type: 'error', text });
+await showError('Please fill required fields', text);
       return;
     }
     setSaving(true);
